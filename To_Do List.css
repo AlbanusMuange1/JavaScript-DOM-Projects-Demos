@@ -1,0 +1,249 @@
+/* General Styles */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 20px 80px;
+    background: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+#header a img{
+    height: 50px;
+}
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#bar{
+    display: none;
+}
+
+#close{
+    display: none;
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.4s ease-in-out;
+    width: 70%;
+}
+
+h3{
+    color: brown;
+    font-size: 2rem;
+}
+
+#navbar li a:hover,
+#navbar li a.active {
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 70%;
+    height: 2px;
+    background-color: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/* To-Do List Styling */
+
+#body{
+    height: 100vh;
+    background-image: url(Images/download\ \(4\).jpg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#add-task-container{
+    width: 350px;
+    padding: 20px 10px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 3px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input{
+    flex: 5;
+    margin-right: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+#add-task{
+    flex: 1;
+    transition: .8sc;
+    font-size: 1.2rem;
+    padding: 5px;
+    background-color: #fff;
+    color: green;
+    border-radius: 10px;
+}
+#add-task:hover{
+    background-color: green;
+    color: #fff;
+}
+
+/* Styling for task which get added to the list */
+
+.task{
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 3px;
+    padding: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.task li{
+    list-style: none;
+    flex: 4;
+    padding: 5px;
+    font-size: 1.3rem;
+    margin: 10px;
+}
+
+.task button{
+    flex: 1;
+    border-radius: 10px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.task .checkTask{
+    color: orange;
+    margin-right: 5px;
+    border: solid 2px orange;
+    font-size: 1.5rem;
+}
+
+.task .checkTask:hover{
+    background-color: orange;
+    color: #fff;
+}
+
+.task .deleteTask{
+    color: red;
+    border: solid 2px red;
+    font-size: 1.3rem;
+}
+.task .deleteTask:hover{
+    background-color: red;
+    color: #fff;
+}
+
+
+/* JavaScript Styling link*/
+
+.accordion .content-container.active .answer {
+    height: 120px;
+}
+
+.accordion .content-container.active .question{
+    font-size: 18px;
+    transition: .5s;
+}
+ 
+.accordion .content-container.active .question::after{
+    content: '-';
+    font-size: 28px;
+    transition: .5s;
+}
+
+/* Styling Media Query */
+
+@media (max-width:799px){
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -500px;
+        height: 40vh;
+        width: 200px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: .5s;
+    }
+
+    #navbar.active{
+        right: 0;
+    }
+
+    h3 {
+        color: brown;
+        font-size: 1.2rem;
+    }
+    #navbar li{
+        margin-bottom: 25px;
+    }
+    #bar{
+        display: flex;
+        background-color: #43c2b7;
+        align-items: center;
+    }
+    #mobile i{
+        color: green;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    #close{
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #ee0d0d;
+        font-size: 24px;
+        background-color: #1a1a1a;
+    }
+}
+
+@media (max-width:477px) {
+    #header {
+        padding: 5px 10px;
+    }
+    #navbar {
+        right: -500px;
+        height: 45vh;
+        width: 150px;
+        padding: 80px 0 0 10px;
+    }
+}

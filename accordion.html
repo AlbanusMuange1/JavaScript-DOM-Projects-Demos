@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+    <!-- CSS stylesheet-->
+    <link rel="stylesheet" href="accordion.css">
+    <!-- Globe Font Link -->
+    <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+    <!-- FontAswesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+    <section id="header">
+        <a href="index.html"><img src="Images/civil.jpg" class="logo" alt="This is a logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><h3>Five DOM Manuplation Projects</h3></li>
+                <li><a href="index.html">Quotes</a></li>
+                <li><a href="modal.html">Model</a></li>
+                <li><a class="active" href="accordion.html">Accordion</a></li>
+                <li><a href="stop-watch.html">Stop Watch</a></li>
+                <li><a href="To-Do List.html">To-Do List</a></li>
+                <a href="#" id="close"><i class="far fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fas fa-outdent">Projects</i>
+        </div>
+    </section>
+    <!-- Project 3: Accordion -->
+    <section id="body">
+    <div class="accordion">
+        <h2 class="accordion-title">Frequently Asked Questions in Software Engineering</h2>
+        <div class="content-container">
+            <div class="question">What is a software?</div>
+            <div class="answer"> Software is considered to be collection of executable 
+                programming code, associated libraries and documentations. Software, 
+                when made for a specific requirement is called software product.
+            </div>
+            <div class="question">What is engineering?</div>
+            <div class="answer"> Engineering is all about developing products,
+                 using well-defined, 
+                scientific principles and methods.
+            </div>
+            <div class="question">What is software engineering?</div>
+            <div class="answer">Software engineering is an engineering branch associated with development of software product 
+                using well-defined scientific principles, methods and procedures. 
+                The outcome of software engineering is an efficient and reliable software product.
+            </div>
+        </div>
+    </div>
+    </section>
+    <script src="accordion.js"></script>
+</body>
+</html>
